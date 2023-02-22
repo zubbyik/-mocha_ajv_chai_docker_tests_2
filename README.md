@@ -30,10 +30,10 @@
      - run npm install
      - copy the rest of the files from host to docker
      - do >> RUN npm run build #[to compile ts file to js -es5 %see tsconfig.json for details]
-     - do >> ENTRYPOINT ["npm"]
+     - do >> ENTRYPOINT ["npm"] :crossed_fingers:
      - do >> CMD ["test", "test_src.js"]
 9. run the docker build #[docker build -t name(in my instance node:test) .
 10. run the docker run #[docker run -it --rm node:test]
 11. Test should pass is it is a positive unit test and the code is alright
 
-### !! Thanks
+### !! Thanks :love_you_gesture:
