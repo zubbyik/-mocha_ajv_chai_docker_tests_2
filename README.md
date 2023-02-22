@@ -15,7 +15,7 @@
    d. typescript
 6. Install the following as dependencies:
    a. AJV #will be used later for testing json schema
-   b. Chai
+   b. Chai 😍
 
 7. create a Dockerfile
 
