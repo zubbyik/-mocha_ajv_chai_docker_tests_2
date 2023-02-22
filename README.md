@@ -19,7 +19,7 @@
 
 7. create a Dockerfile
 
-8. ### In the Dockerfile
+8. In the Dockerfile
    - Base node:19-alpine #choice is because its dependencies are sufficient in my case and it has low footprint ~176MB
    - mkdir src #[where app lives] and tests #[where test files live]
    - Copy from host to docker machine the following files:
