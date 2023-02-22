@@ -1,4 +1,4 @@
-### Running a Test with Mocha as the test runner, Chai as the test Library using docker
+### Running a Test with Mocha as the test runner, Chai as the test Library using docker :heart:
 
 =======================================================================================
 
