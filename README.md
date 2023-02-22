@@ -23,15 +23,15 @@
    - Base node:19-alpine #choice is because its dependencies are sufficient in my case and it has low footprint ~176MB
    - mkdir src #[where app lives] and tests #[where test files live]
    - Copy from host to docker machine the following files:
-     copy test_src.ts ./tests
-     copy app.ts ./src
-     copy package.json to docker [copy package.json .]
-     copy tsconfig.json #[typescript config file] to docker
-     run npm install
-     copy the rest of the files from host to docker
-     do >> RUN npm run build #[to compile ts file to js -es5 %see tsconfig.json for details]
-     do >> ENTRYPOINT ["npm"]
-     do >> CMD ["test", "test_src.js"]
+     - copy test_src.ts ./tests
+     - copy app.ts ./src
+     - copy package.json to docker [copy package.json .]
+     - copy tsconfig.json #[typescript config file] to docker
+     - run npm install
+     - copy the rest of the files from host to docker
+     - do >> RUN npm run build #[to compile ts file to js -es5 %see tsconfig.json for details]
+     - do >> ENTRYPOINT ["npm"]
+     - do >> CMD ["test", "test_src.js"]
 9. run the docker build #[docker build -t name(in my instance node:test) .
 10. run the docker run #[docker run -it --rm node:test]
 11. Test should pass is it is a positive unit test and the code is alright
