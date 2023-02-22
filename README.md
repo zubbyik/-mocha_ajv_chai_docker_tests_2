@@ -1,7 +1,5 @@
 ### Running a Test with Mocha as the test runner, Chai as the test Library using docker :heart:
 
-=======================================================================================
-
 1. create the app and the Test File
    a. App name the app.js
    b. test file is test_src.js
