@@ -1,9 +1,9 @@
 FROM node:19-alpine
-WORKDIR dev
-RUN mkdir src && mkdir tests
-COPY test_src.ts tests/
-COPY ["build.ts",  "src/package.json",  "./"]
-COPY ["tsconfig.json",  "./"]
+WORKDIR /app
+# RUN mkdir src && mkdir tests
+# COPY test_src.ts tests/
+COPY ["tsconfig.json",  "package.json",  "./"]
+# COPY ["test_src.ts", "app.ts", "./"]
 RUN npm install
 # RUN npm run build
 COPY . .

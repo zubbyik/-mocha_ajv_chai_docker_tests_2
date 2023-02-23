@@ -5,7 +5,7 @@ services:
       context: .
     working_dir: /app
     volumes:
-      - $pwd:/app
+      - $pwd:./
       - /node_modules
     command: npm run dev
   Test:
@@ -13,7 +13,7 @@ services:
       context: .
     working_dir: /app
     volumes:
-      - $PWD:.
+      - $PWD:./
       - /node_modules
     depends_on:
       - App
