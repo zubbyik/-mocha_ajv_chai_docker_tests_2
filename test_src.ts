@@ -7,4 +7,8 @@ describe("adding two numbers ", () => {
   it(`This is adding two numbers ${a} to ${b} give the result 5`, () => {
     chai.expect(add(a, b)).to.equal(5);
   });
+
+  it("This tests the second number", () => {
+    chai.expect(add(12, 23)).to.be.equal(22);
+  });
 });
