@@ -4,7 +4,7 @@ services:
     build:
       context: .
       args:
-        - SERVER_ARGS=test
+        - SERVER_ARGS=testdo
     volumes:
       - $PWD:/app
       - /node_modules
