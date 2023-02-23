@@ -4,7 +4,7 @@ services:
     build:
       context: .
     volumes:
-      - $PWD:./app
+      - $PWD:/app
       - /node_modules
     command: npm run dev
   test:
@@ -12,7 +12,7 @@ services:
       context: .
       dockerfile: ./DockerfileTest
     volumes:
-      - $PWD:./app
+      - $PWD:/app
       - /node_modules
     depends_on:
       - app
