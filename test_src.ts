@@ -9,6 +9,6 @@ describe("adding two numbers ", () => {
   });
 
   it("This tests the second number", () => {
-    chai.expect(add(12, 23)).to.be.equal(22);
+    chai.expect(add(12, 23)).to.be.equal(35);
   });
 });
