@@ -1,5 +1,6 @@
 FROM node:19-alpine
 WORKDIR /app
+ARG SERVER_ARG
 # RUN mkdir src && mkdir tests
 # COPY test_src.ts tests/
 COPY ["tsconfig.json",  "package.json",  "./"]
@@ -7,5 +8,9 @@ COPY ["tsconfig.json",  "package.json",  "./"]
 RUN npm install
 # RUN npm run build
 COPY . ./
+RUN if [ "${SERVER_ARG}" = "test" ];\
+    then echo "This is for Testing";\
+    else echo "This is for production";\
+    fi
 # ENTRYPOINT ["node"]
 # CMD ["test_src.js"]

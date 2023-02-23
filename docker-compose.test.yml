@@ -3,6 +3,8 @@ services:
   app:
     build:
       context: .
+      args:
+        - SERVER_ARGS=test
     volumes:
       - $PWD:/app
       - /node_modules
