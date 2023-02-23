@@ -8,7 +8,7 @@ services:
       - $PWD:./
       - /node_modules
     command: npm run dev
-  Test:
+  test:
     build: 
       context: .
     working_dir: /app
