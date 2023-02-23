@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  App:
+    build:
+      context: .
+    working_dir: /app
+    volumes:
+      - $pwd:/app
+      - /node_modules
+    command: npm run dev
+  Test:
+    build: 
+      context: .
+    working_dir: /app
+    volumes:
+      - $PWD:.
+      - /node_modules
+    depends_on:
+      - App
+    command: npm run test
