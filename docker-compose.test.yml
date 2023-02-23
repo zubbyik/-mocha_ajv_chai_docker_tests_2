@@ -4,18 +4,18 @@ services:
     build:
       context: .
       args:
-        - SERVER_ARGS=testdo
+        - SERVER_ARGS=test
     volumes:
       - $PWD:/app
       - /node_modules
     command: npm run dev
-  test:
-    build: 
-      context: .
-      dockerfile: ./DockerfileTest
-    volumes:
-      - $PWD:/app
-      - /node_modules
-    depends_on:
-      - app
-    entrypoint: npm
+  # test:
+  #   build: 
+  #     context: .
+  #     dockerfile: ./DockerfileTest
+  #   volumes:
+  #     - $PWD:/app
+  #     - /node_modules
+  #   depends_on:
+  #     - app
+    # entrypoint: npm
