@@ -6,7 +6,7 @@ COPY ["tsconfig.json",  "package.json",  "./"]
 # COPY ["test_src.ts", "app.ts", "./"]
 RUN npm install
 # RUN npm run build
-COPY . .
+COPY . ./
 # ENTRYPOINT ["node"]
 # CMD ["test_src.js"]
 
