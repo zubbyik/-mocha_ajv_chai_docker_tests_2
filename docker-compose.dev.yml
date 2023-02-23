@@ -3,6 +3,8 @@ services:
   notes:
     build: 
       context: .
+      args:
+        - SERVER_ARGS=dev
     ports:
       - 8000:8000
       - 9229:9229
