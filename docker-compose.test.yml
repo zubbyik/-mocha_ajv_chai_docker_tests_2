@@ -17,4 +17,4 @@ services:
       - /node_modules
     depends_on:
       - App
-    command: npm run test
+    entrypoint: npm
