@@ -3,18 +3,16 @@ services:
   app:
     build:
       context: .
-    working_dir: /app
     volumes:
-      - $PWD:./
+      - $PWD:./app
       - /node_modules
     command: npm run dev
   test:
     build: 
       context: .
       dockerfile: ./DockerfileTest
-    working_dir: /app
     volumes:
-      - $PWD:./
+      - $PWD:./app
       - /node_modules
     depends_on:
       - app
